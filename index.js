@@ -16,6 +16,8 @@ const elo = new EloCalc({});
 //   players[player] = elo.createPlayer();
 // });
 
+
+// == Set Players
 const Brice_Shatzer = elo.createPlayer();
 Brice_Shatzer.name = 'Brice Shatzer';
 const Bryce_Dorn = elo.createPlayer();
@@ -29,16 +31,77 @@ Joe_Duran.name = 'Joe Duran';
 const Mike_Parent = elo.createPlayer();
 Mike_Parent.name = 'Mike Parent';
 
+// == Set Games
+let games = [
+	createGame(Brice_Shatzer, Bryce_Dorn, 1),
+	createGame(Brice_Shatzer, Bryce_Dorn, 0),
+	createGame(Brice_Shatzer, Danny_Cheng, 1), // white = Brice?
+	createGame(Danny_Cheng, Brice_Shatzer, 1, new Date('11/26/2018')), // white = Danny
+	createGame(Jamie_Levinson, Mike_Parent, 0)
+]
+
+
+
+// === update elo from arry of game objects
+let games_eloCalcFormat = [];
+games.forEach((gameObj) =>{
+	let arr = [];
+	arr.push(gameObj.whitePlayer);
+	arr.push(gameObj.blackPlayer);
+	arr.push(gameObj.winner === 'draw' ? 0.5 : gameObj.winner);
+	games_eloCalcFormat.push(arr);
+});
+
+elo.updateRatings(games_eloCalcFormat);
+
+/*
 elo.updateRatings([
   [Brice_Shatzer, Bryce_Dorn, 1],  // Brice_Shatzer wins
   [Brice_Shatzer, Bryce_Dorn, 0],  // Brice_Shatzer loses
-  [Brice_Shatzer, Danny_Cheng, 1],
-  [Brice_Shatzer, Danny_Cheng, 0],
+  [Brice_Shatzer, Danny_Cheng, 1], // white = Brice?
+  [Danny_Cheng, Brice_Shatzer, 1], // white = Danny
   [Jamie_Levinson, Mike_Parent, 0]
   // [player2, player3, .5] // Player 2 and player 3 draws the game
 ]);
+*/
+
 
 elo.players.forEach(function(player, i) {
-
-  console.log(`${player.name} has played ${player.numberOfGamesPlayed} games and has a rating of ${Math.round(player.rating)}`);
+ console.log(`${player.name} has played ${player.numberOfGamesPlayed} games and has a rating of ${Math.round(player.rating)}`);
 });
+
+
+
+function createGame (whitePlayer, blackPlayer, winner, date) {
+	obj = {}
+
+	if (
+		!_isValidPlayer(whitePlayer) ||
+		!_isValidPlayer(blackPlayer)) {
+			return console.log('Error Creating Game: invalid player');
+	} else if (
+		!winner == 1 &&
+		!winner == 0 &&
+		!winner == .5 &&
+		!winner == 'draw'
+	){
+		return console.log('Error Creating Game: invalid result value');
+	} else {
+		obj.whitePlayer = whitePlayer;
+		obj.blackPlayer = blackPlayer;
+		obj.winner = winner;
+		obj.date = (date && new Date(date).valueOf()) ? new Date(date) : new Date().toDateString();
+	}
+
+	return obj;
+
+
+	function _isValidPlayer (player) {
+		const properties = Object.getOwnPropertyNames(player);
+		return (
+			properties.includes('rating') &&
+			properties.includes('numberOfGamesPlayed') &&
+			properties.includes('highestRating')
+		)
+	}
+}
