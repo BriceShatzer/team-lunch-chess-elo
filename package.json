@@ -1,0 +1,19 @@
+{
+  "name": "team-lunch-chess-elo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BriceShatzer/team-lunch-chess-elo.git"
+  },
+  "author": "brice.shatzer@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BriceShatzer/team-lunch-chess-elo/issues"
+  },
+  "homepage": "https://github.com/BriceShatzer/team-lunch-chess-elo#readme"
+}
