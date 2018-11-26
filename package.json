@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/BriceShatzer/team-lunch-chess-elo/issues"
   },
-  "homepage": "https://github.com/BriceShatzer/team-lunch-chess-elo#readme"
+  "homepage": "https://github.com/BriceShatzer/team-lunch-chess-elo#readme",
+  "dependencies": {
+    "elo-calculator": "^1.0.1"
+  }
 }
