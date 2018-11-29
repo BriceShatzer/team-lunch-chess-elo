@@ -38,7 +38,8 @@ let games = [
 	createGame(Brice_Shatzer, Danny_Cheng, 1), // white = Brice?
 	createGame(Danny_Cheng, Brice_Shatzer, 1, new Date('11/26/2018')), // white = Danny
 	createGame(Jamie_Levinson, Mike_Parent, 0),
-	createGame(Joe_Duran, Brice_Shatzer, 0, new Date('11/27/2018'))
+	createGame(Joe_Duran, Brice_Shatzer, 0, new Date('11/27/2018')),
+	createGame(Joe_Duran, Jamie_Levinson, 0, new Date('11/29/2018'))
 ]
 
 
