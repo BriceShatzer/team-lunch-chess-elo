@@ -30,6 +30,8 @@ const Joe_Duran = elo.createPlayer();
 Joe_Duran.name = 'Joe Duran';
 const Mike_Parent = elo.createPlayer();
 Mike_Parent.name = 'Mike Parent';
+const Brandon_Comerford = elo.createPlayer();
+Brandon_Comerford.name = 'Brandon Comerford';
 
 // == Set Games
 let games = [
@@ -39,7 +41,8 @@ let games = [
 	createGame(Danny_Cheng, Brice_Shatzer, 1, new Date('11/26/2018')), // white = Danny
 	createGame(Jamie_Levinson, Mike_Parent, 0),
 	createGame(Joe_Duran, Brice_Shatzer, 0, new Date('11/27/2018')),
-	createGame(Joe_Duran, Jamie_Levinson, 0, new Date('11/29/2018'))
+	createGame(Joe_Duran, Jamie_Levinson, 0, new Date('11/29/2018')),
+	createGame(Brandon_Comerford, Bryce_Dorn, 0, new Date('11/29/2018'))
 ]
 
 
