@@ -42,7 +42,8 @@ let games = [
 	createGame(Jamie_Levinson, Mike_Parent, 0),
 	createGame(Joe_Duran, Brice_Shatzer, 0, new Date('11/27/2018')),
 	createGame(Joe_Duran, Jamie_Levinson, 0, new Date('11/29/2018')),
-	createGame(Brandon_Comerford, Bryce_Dorn, 0, new Date('11/29/2018'))
+	createGame(Brandon_Comerford, Bryce_Dorn, 0, new Date('11/29/2018')),
+	createGame(Brice_Shatzer, Danny_Cheng, 0, new Date('12/3/2018'))
 ]
 
 
