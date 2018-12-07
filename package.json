@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "rm index.html && ./node_modules/.bin/parcel build src/index.html --out-dir=."
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/BriceShatzer/team-lunch-chess-elo#readme",
   "dependencies": {
     "elo-calculator": "^1.0.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.10.3"
   }
 }
