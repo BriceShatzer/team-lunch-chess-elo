@@ -83,7 +83,9 @@ function addElement(string) {
 elo.players.forEach(function(player, i) {
 	const s = `${player.name} has played ${player.numberOfGamesPlayed} games and has a rating of ${Math.round(player.rating)}`;
 	console.log(s);
-	addElement(s);
+	if ('window' in this) {
+		addElement(s);
+	}
 });
 
 
