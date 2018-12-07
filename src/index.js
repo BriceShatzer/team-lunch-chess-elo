@@ -74,12 +74,7 @@ elo.updateRatings([
 ]);
 */
 
-function addElement(string) {
-	const el = document.createElement("p");
-	el.innerText = string;
-	document.body.appendChild(el);
-}
-
+elo.players.sort((a, b) => b.rating - a.rating);
 elo.players.forEach(function(player, i) {
 	const s = `${player.name} has played ${player.numberOfGamesPlayed} games and has a rating of ${Math.round(player.rating)}`;
 	console.log(s);
@@ -88,6 +83,11 @@ elo.players.forEach(function(player, i) {
 	}
 });
 
+function addElement(string) {
+	const el = document.createElement("p");
+	el.innerText = string;
+	document.body.appendChild(el);
+}
 
 function createGame (whitePlayer, blackPlayer, winner, date) {
 	obj = {}
