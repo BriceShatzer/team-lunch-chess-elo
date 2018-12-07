@@ -20,5 +20,7 @@
   "dependencies": {
     "elo-calculator": "^1.0.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "parcel-bundler": "^1.10.3"
+  }
 }
