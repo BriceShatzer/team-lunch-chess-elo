@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "build": "rm index.html && find . -type f -name 'src.*.js' -or -name 'src.*.map' -delete  && ./node_modules/.bin/parcel build src/index.html --out-dir=. --public-url ./"
+    "build": "find . -name 'src.*.js' -delete && find . -name 'src.*.map' -delete && find . -name 'index.html' -maxdepth 1 -delete &&./node_modules/.bin/parcel build src/index.html --out-dir=. --public-url ./"
   },
   "repository": {
     "type": "git",
