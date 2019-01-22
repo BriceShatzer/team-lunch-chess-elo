@@ -57,6 +57,7 @@ let games = [
 	createGame(Brice_Shatzer, Joe_Duran, 0, new Date('12/17/2018')),
 	createGame(Brice_Shatzer, Danny_Cheng, 0, new Date('1/4/2019')),
 	createGame(Bryce_Dorn, Brice_Shatzer, 1, new Date('1/4/2019')),
+	createGame(Joe_Duran, Brice_shatzer, 1, new Date('1/22/2009'))
 ]
 
 
